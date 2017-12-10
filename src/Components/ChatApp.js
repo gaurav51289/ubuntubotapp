@@ -11,7 +11,7 @@ class ChatApp extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { messages: [] };
+        this.state = { messages: [], thinking: false };
         this.sendHandler = this.sendHandler.bind(this);
 
     }
@@ -26,6 +26,10 @@ class ChatApp extends React.Component {
             question
         };
 
+        this.setState({
+            thinking: true
+        });
+
         API.ask(questionObj)
             .then((resJSON) => {
                 let answerObj = {
@@ -33,6 +37,9 @@ class ChatApp extends React.Component {
                     message: resJSON.answer,
                     fromMe: false
                 };
+                this.setState({
+                    thinking: false
+                });
                 this.addMessage(answerObj);
             })
             .catch((error) => {
@@ -47,14 +54,34 @@ class ChatApp extends React.Component {
         // Append the message to the component state
         const messages = this.state.messages;
         messages.push(message);
-        this.setState({ messages });
+        this.setState({
+            messages
+        });
     }
 
+
+
     render() {
+
+        let thinking = '';
+
+        if(this.state.thinking){
+            thinking = <div className='thinking'>
+                            <p>Thinking... <img
+                                src={'./thinking.gif'}
+                                width={30}
+                                height={20}
+                                align={'middle'}
+                            /></p>
+                        </div>;
+        }
+
         return (
             <div className="container">
-                <h3>Ubuntu Bot</h3>
+                <h2>Ubuntu Bot</h2>
                 <Messages messages={this.state.messages} />
+
+                {thinking}
                 <ChatInput onSend={this.sendHandler} />
             </div>
         );
