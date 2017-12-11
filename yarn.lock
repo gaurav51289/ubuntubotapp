@@ -5189,6 +5189,10 @@ react-scripts@1.0.17:
   optionalDependencies:
     fsevents "1.1.2"
 
+react-speech-recognition-input@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/react-speech-recognition-input/-/react-speech-recognition-input-0.1.1.tgz#f4b5e237234a3c4ae2513174fece5ee01e4d93a9"
+
 react-speech-recognition@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/react-speech-recognition/-/react-speech-recognition-1.0.4.tgz#b2748681b69cf6c05763f310f1b6f70b38ecd931"
