@@ -1,5 +1,5 @@
-export const API = 'http://ec2-34-228-57-81.compute-1.amazonaws.com:5000';
-//export const API = 'http://localhost:4000';
+//export const API = 'http://ec2-34-228-57-81.compute-1.amazonaws.com:5000';
+export const API = 'http://localhost:5000';
 
 
 
