@@ -68,6 +68,7 @@ class ChatApp extends React.Component {
         if(this.state.thinking){
             thinking = <div className='thinking'>
                             <p>Thinking... <img
+                                alt="... wait"
                                 src={'./thinking.gif'}
                                 width={30}
                                 height={20}
@@ -78,7 +79,7 @@ class ChatApp extends React.Component {
 
         return (
             <div className="container">
-                <h2>Ubuntu Bot</h2>
+                <h2>Bot Ubuntu</h2>
                 <Messages messages={this.state.messages} />
 
                 {thinking}

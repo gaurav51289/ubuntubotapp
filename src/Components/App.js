@@ -35,7 +35,7 @@ class App extends Component {
         // Initial page load, show a simple login form
         return (
             <form onSubmit={this.usernameSubmitHandler} className="username-container">
-                <h1>Ubuntu Bot</h1>
+                <h1>Bot Ubuntu</h1>
                 <div>
                     <input
                         type="text"

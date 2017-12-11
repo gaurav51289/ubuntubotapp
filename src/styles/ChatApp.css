@@ -22,15 +22,10 @@ h2 {
 .chat-input {
     position: relative;
     overflow: hidden;
-    padding: 0 40px;
+    padding-left: 10px;
     flex-shrink: 0;
 }
 
-.chat-input input[type="text"] {
-    width: 100%;
-    margin-left: -20px;
-    margin-right: -20px;
-}
 
 .message.from-me .username {
     display: block;
@@ -80,3 +75,34 @@ h2 {
 .thinkingimg {
     margin-left: -40px;
 }
+
+.chat-input-box {
+    float: left;
+    width: 90%;
+}
+
+.dict-btn-box {
+    margin-left: -15px;
+    float: left;
+    width: 10%;
+}
+
+.dict-btn {
+    margin: 10px 0;
+    padding: 10px 0;
+    width: 100%;
+    border: none;
+    outline:none;
+}
+
+.dict-btn-active{
+    margin: 10px 0;
+    padding: 10px 0;
+    width: 100%;
+    border: none;
+    outline:none;
+    background-color: #dee0e0;
+}
+
+
+
