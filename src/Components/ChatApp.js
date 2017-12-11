@@ -44,6 +44,15 @@ class ChatApp extends React.Component {
             })
             .catch((error) => {
                 console.error(error);
+                let answerObj = {
+                    username: 'Ubuntu Bot',
+                    message: "I am Sorry..!! Something is wrong. Please, try again later. :(",
+                    fromMe: false
+                };
+                this.setState({
+                    thinking: false
+                });
+                this.addMessage(answerObj);
             });
 
         messageObject.fromMe = true;
