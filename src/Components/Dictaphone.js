@@ -18,10 +18,10 @@ class Dictaphone extends Component {
                 isListening: false
             });
         } else {
-            // this.props.resetTranscript();
-            // this.props.startListening();
+            this.props.resetTranscript();
+            this.props.startListening();
             this.setState({
-                isListening: false
+                isListening: true
             });
         }
     }
