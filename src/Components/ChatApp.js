@@ -79,8 +79,8 @@ class ChatApp extends React.Component {
                             <p>Thinking... <img
                                 alt="... wait"
                                 src={'./thinking.gif'}
-                                width={30}
-                                height={20}
+                                width={45}
+                                height={30}
                                 align={'middle'}
                             /></p>
                         </div>;
