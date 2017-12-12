@@ -44,7 +44,9 @@ class ChatInput extends React.Component {
                     />
                 </div>
                 <div className="dict-btn-box">
-                    <Dictaphone handleChange={
+                    <Dictaphone
+                        handleSendBtn = { (event) => this.submitHandler(event)}
+                        handleChange={
                         (newText) => {
                             this.speechHandler(newText)
                         }

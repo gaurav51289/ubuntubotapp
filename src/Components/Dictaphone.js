@@ -35,16 +35,26 @@ class Dictaphone extends Component {
     render() {
         const { browserSupportsSpeechRecognition } = this.props;
 
-        if (!browserSupportsSpeechRecognition) {
-            return null
-        }
-
         let btnClass;
         if(this.state.isListening){
             btnClass = 'dict-btn-active';
         } else {
             btnClass = 'dict-btn';
         }
+
+        if (!browserSupportsSpeechRecognition) {
+            return (
+                <input
+                    alt="Send"
+                    type="image"
+                    src={'./btn1.png'}
+                    className={'btnClass1'}
+                    onClick = {(event) => this.props.handleSendBtn(event)}
+                />
+            )
+        }
+
+
 
         return (
                 <input
